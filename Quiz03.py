@@ -24,6 +24,10 @@ vector01 = [1,2]
 vector02 = [3,4]
 print(dot(vector01,vector02))
 
+vector010 = [2,3,4]
+vector020 = [1,2]
+print(dot(vector010,vector020))
+
 #2
 def vecSubtraction(vector01,vector02):
   '''
@@ -35,15 +39,19 @@ def vecSubtraction(vector01,vector02):
     print('error')
     return None
   #If the lengths of the lists vector01 and vector02 do not equal each other, then this prints an error and returns none.
-  for i in range(len(vector1)):
+  for i in range(len(vector01)):
     A.append(vector01[i] - vector02[i])
-    #This asubtracts the lengths of vector01 and vector02 and adds each element of the list together.
+    #This subtracts the lengths of vector01 and vector02 and adds each element of the list together.
   return A
   #This returns the list A.
 
-V1 = [1,2]
-V2 = [3,4]
-print(vecAddition(V1,V2))
+vector01 = [1,2]
+vector02 = [3,4]
+print(vecSubtraction(vector01,vector02))
+
+vector010 = [2,3,4]
+vector020 = [1,2]
+print(vecSubtraction(vector010,vector020))
 
 #3
 def scalarMultVec(scalar,vector):
@@ -61,7 +69,15 @@ def scalarMultVec(scalar,vector):
     A.append(vector[i] * scalar)
     #For each element in length i, multiply by the scalar.
   return A
-#This creates a new list for A and returns A.
+  #This creates a new list for A and returns A.
+
+scalar = 2
+vector = [1,2]
+print(scalarMultVec(scalar,vector))
+      
+scalar01 = [1,2]
+vector01 = [3,4]
+print(scalarMultVec(scalar01,vector01))
 
 #4
 def infNorm(vector):
@@ -77,7 +93,13 @@ def infNorm(vector):
       result = abs(vector[i])
       #If the result is greater than or equal to than the previous element, then the element becomes the result.
   return result
-#This returns the integer as the result.
+  #This returns the integer as the result.
+  
+vector = [3,-4]
+print(infNorm(vector))
+
+vector1 = 9
+print(infNorm(vector1))
 
 #5
 def normalize(vector):
@@ -93,3 +115,9 @@ def normalize(vector):
   #This takes the scalar multiplication vector function and runs it to get B, B is the vector and scalar is scalar.
   return B
 #This returns the vector B.
+
+vector = [0,2,-6]
+print(normalize(vector))
+
+vector1 = -18
+print(normalize(vector1))
