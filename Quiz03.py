@@ -114,7 +114,7 @@ def normalize(vector):
   B = scalarMultVec(scalar,vector)
   #This takes the scalar multiplication vector function and runs it to get B, B is the vector and scalar is scalar.
   return B
-#This returns the vector B.
+  #This returns the vector B.
 
 vector = [0,2,-6]
 print(normalize(vector))
